@@ -1,0 +1,41 @@
+{% extends "modcp/base.html" %}
+{% block "title" %}Edit Announcment{% endblock %}
+{% block "content" %}
+    <div class="page-announce valign-wrapper"><a href="#" data-activates="slide-out" class="button-collapse valign hide-on-large-only"><i class="material-icons">menu</i></a><h1 class="page-announce-text valign">// Edit Announcements </h1></div>
+    <div class="container">
+        {% if error %}
+            <div class="alert alert-danger">{{ error }}</div><br>
+        {% endif %}
+        {% if success %}
+            <div class="alert alert-success">Success!</div><br>
+        {% endif %}
+        <div class="custom-responsive">
+            <table class="centered striped hover">
+                <thead>
+                    <tr>
+                        <th>Text</th>
+                        <th>Type</th>
+                        <th>Server Enabled?</th>
+                        <th>Active?</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for alert in alerts %}
+                        <tr>
+                            <td>{{ alert.text }}</td>
+                            <td>{{ alert.type}}</td>
+                            <td>{{ alert.server_enabled }}</td>
+                            <td>{{ alert.active }}</td> 
+                            <td>
+                                {% if alert.active %}
+                                    <div class="btn red"><a href="/mods/announcement/revoke/{{ alert.id }}" style="color: #fff;">revoke</a></div>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
