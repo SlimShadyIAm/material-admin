@@ -1,6 +1,6 @@
 # Materialized Admin
 
-This is a simple template for an administrative panel that is based on the [materializecss.com](http://materializecss.com) framework to give the site a beautiful look, adhering to the principles of Google's Material design language. This template is currently in use as the moderator control panel at [opdessertstorm.com](https://opdessertstorm.com), a game with over **8,000 accounts**. 
+This is a simple template for an administrative panel that is based on the [materializecss.com](http://materializecss.com) framework to give the site a beautiful look, adhering to the principles of Google's Material design language. This template is currently in use as the moderator control panel at [opdessertstorm.com](https://opdessertstorm.com), a game with over **32,000 accounts**. 
 
 ## Demo 
 
